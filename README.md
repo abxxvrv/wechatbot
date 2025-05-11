@@ -19,13 +19,13 @@ pip install pyautogui opencv-python numpy openai cnocr
 ```
 
 ### 配置
-1. **Deepseek API 配置**：将代码中的 `api_key` 替换为你的 Deepseek API 密钥，并将 `base_url` 设置为正确的 Deepseek API 服务地址（如果该地址是正确的，可以直接使用；否则，你需要检查并确认正确的 API 服务地址）。由于我尝试访问 `https://api.deepseek.com` 时遇到了问题（可能是网络原因，也可能是链接本身的问题），建议你检查这个链接是否合法并能正常访问，如有需要请替换为你实际可用的 Deepseek API 地址。
-2. **微信聊天窗口区域配置**：根据你实际电脑屏幕上微信聊天窗口的位置和大小，调整 `wechat_chat_region` 的值（格式为 `(左, 上, 宽, 高)`）。
+1. **Deepseek API 配置**：将代码中的 `api_key` 替换为你的 Deepseek API 密钥。
+2. **微信聊天窗口区域配置**：根据你实际电脑屏幕上微信聊天窗口的位置和大小，调整 `wechat_chat_region` 的值（格式为 `(左, 上, 宽, 高)`）。可以使用截图工具，如QQ，鼠标在的位置会显示坐标。
 
 ### 运行
 运行该 Python 脚本即可开始自动检测微信聊天窗口中的新消息并进行回复。你可以通过在终端中切换到项目目录并运行以下命令来启动脚本：
 ```bash
-python <脚本文件名>.py
+python wechatbot.py
 ```
 脚本会持续运行并监控微信聊天窗口的变化，当检测到新消息时会执行 OCR 识别、内容回复等操作。
 
